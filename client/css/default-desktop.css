@@ -1,0 +1,44 @@
+body {
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#E79749;
+}
+
+div#container {
+    width:800px;
+    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+}
+
+.getHomePage {
+    background-color:white;
+}
+
+#output {
+    margin-top:16px;
+    border-top:16px solid #f0f0f0;
+    border-bottom:16px solid #f0f0f0;
+    border-left:16px solid #f7f7f7;
+    border-right:16px solid #f7f7f7;
+    -moz-box-shadow: 0 0 256px #888;
+    -webkit-box-shadow: 0 0 256px #888;
+    box-shadow: 0 0 256px #888;
+}
+
+.dirIndexItem:first-child {
+    border-top:16px solid silver;
+}
+
+.showplaylist {
+    margin:16px;
+    margin:16px;
+    padding:4px;
+}
+.showplaylist:hover {
+    cursor:pointer;
+    background-color:#f0f0f0;
+    border-bottom:2px solid #dfdfdf;
+}

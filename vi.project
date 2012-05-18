@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vi ./server/config.php ./server/index.php ./client/index.html ./client/js/wstreams.config.js ./client/js/wstreams.js ./client/js/jquery/plugins/jplayer/skins/blue.monday/jplayer.blue.monday.css ./client/css/jPlayerPlaylist.css ./client/css/default.css ./server/API.txt LICENSE server/tmpl/player.tmpl client/css/default-desktop.css ./client/desktop.html

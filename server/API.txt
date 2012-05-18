@@ -1,0 +1,130 @@
+// See LICENSE for licensing.
+
+GET: action=getFileIndex & dir=some/path
+RETURNS: (or status=fail and a message=...)
+{
+    "status":"ok",
+    "message":"Some message",
+    "fileIndex":
+        [{
+            "file":"example.mp3",
+            "filesize":"5mb",
+            "displayFile":"example",
+            "url":"http://www.example.com/music/example.mp3"
+        }]
+}
+
+GET: action=getDirIndex & dir=some/path
+RETURNS: (or status=fail and a message=...)
+{
+    "status":"ok",
+    "message":"Some message",
+    "dirIndex":
+        [{
+            "dir":"some_directory",
+            "displayDir":"some directory",
+            "url":"http://www.example.com/music/some_directory"
+            "relDir":"path/to/some directory"
+        }]
+}
+
+GET: action=getPlayer & dir=some/path
+RETURNS: (or status=fail and a message=...)
+{
+    "status":"ok",
+    "message":"Player created successfully.",
+    "player":"The full HTML of the player to be embedded into the page."
+}
+
+GET: action=downloadAlbum & dir=some/path
+RETURNS: .zip file containing the album of music.
+
+GET: action=getMusicTypes
+RETURNS: (An array of file extensions in lower and upper case.)
+[
+    "mp3",
+    "MP3"
+]
+
+GET: action=getBreadcrumbs & dir=some/path/to/music
+RETURNS: (An array of breadcrumbs and their relative URLs.)
+{
+    "status":"ok",
+    "message":"Here are your breadcrumbs.",
+    "breadcrumbs":
+        [
+            {
+                "url":"some",
+                "text":"some",
+                "subdirs":
+                    [
+                        {
+                            "dir":"path",
+                            "displayDir":"path",
+                            "url":"https://www.example.com/some/path",
+                            "relDir":"some/path"
+                        }
+                    ]
+            },
+            {
+                "url":"some/path",
+                "text":"path",
+                "subdirs":
+                    [
+                        {
+                            "dir":"to",
+                            "displayDir":"to",
+                            "url":"https://www.example.com/some/path/to",
+                            "relDir":"some/path/to"
+                        }
+                    ]
+            },
+            {
+                "url":"some/path/to",
+                "text":"to",
+                "subdirs":
+                    [
+                        {
+                            "dir":"music",
+                            "displayDir":"music",
+                            "url":"https://www.example.com/some/path/to/music",
+                            "relDir":"some/path/to/music"
+                        }
+                    ]
+            },
+            {
+                "url":"some/path/to/music",
+                "text":"music",
+                "subdirs":[]
+            },
+        ]
+}
+
+GET: action=getAlbumCover & dir=some/path/to/music
+RETURNS:
+{
+    "status":"ok",
+    "message":"Here is your album cover.",
+    "cover":"cover.jpg"
+    "coverUrl":"http://www.example.com/some/path/to/music/cover.jpg"
+}
+
+GET: action=getPlaylist & dir=some/path/to/music
+RETURNS:
+{
+    "status":"ok",
+    "message":"Here is your playlist.",
+    "playlist":
+        [
+            {
+                "title":"Song 1",
+                "mp3":"https://www.example.com/some/path/to/music/song1.mp3",
+                "poster":"https://www.example.com/some/path/to/music/cover.jpg"
+            },
+            {
+                "title":"Song 2",
+                "mp3":"https://www.example.com/some/path/to/music/song2.mp3",
+                "poster":"https://www.example.com/some/path/to/music/cover.jpg"
+            }
+        ]
+}

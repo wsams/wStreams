@@ -1,0 +1,253 @@
+/* See LICENSE for licensing. */
+
+#jp_container_1 {
+    background-color:white;
+    border:0px;
+    width:100%;
+}
+
+.jp-playlist {
+    height:256px;
+    overflow-y:auto;
+}
+
+.jp-playlist, .jp-playlist-item, .jp-playlist ul, .jp-playlist li, .jp-playlist div {
+    background-color:white;
+    border:0px;
+}
+
+.jp-playlist-item {
+    background-image:url('../images/transBack.png');
+    background-repeat:repeat-x;
+    background-position:top left;
+}
+
+div.jp-playlist ul {
+    list-style-type:none;
+    width:95%;
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0px;
+}
+
+div.jp-playlist ul li {
+    margin:0px;
+    padding:0px;
+}
+
+.jp-playlist-current {
+    font-weight:bold;
+}
+
+.jp-playlist-item-remove {
+    font-weight:bold;
+    margin-right:8px;
+}
+
+.jp-playlist-item-free {
+    margin-right:8px;
+}
+
+.jp-playlist-item-remove {
+    /*
+    display:none;
+    visibility:hidden;
+    */
+}
+
+a.jp-playlist-item, a.jp-playlist-item:link {
+    text-decoration:none;
+    color:#404040;
+    display:block;
+    margin:0px;
+    padding:8px;
+    width:100%;
+}
+
+a.jp-playlist-item:hover {
+    text-decoration:none;
+    color:black;
+    display:block;
+    margin:0px;
+    padding:8px;
+    width:100%;
+    background-color:#f0f0f0;
+}
+
+.jp-interface {
+    padding:16px;
+    border-bottom:4px solid #f0f0f0;
+    border-top:4px solid #f0f0f0;
+}
+
+.jp-current-time, .jp-duration {
+    font-size:.8em;
+    color:gray;
+    height:16px;
+}
+
+.jp-current-time {
+    float:left;
+    margin:0px 8px 0px 0px;
+}
+
+.jp-duration {
+    float:left;
+    margin:0px 0px 0px 8px;
+}
+
+.jp-time-holder {
+    width:100%;
+    margin:8px 0px;
+}
+
+.jp-progress {
+    height:16px;
+    width:80%;
+    background-color:#f0f0f0;
+    float:left;
+}
+
+.jp-seek-bar {
+    height:16px;
+    width:100%;
+    background-color:silver;
+}
+
+.jp-play-bar {
+    height:16px;
+    width:0%;
+    background-color:#E79749;
+    border-right:1px solid white;
+    overflow:hidden;
+}
+
+#percentleft {
+    font-size:.75em;
+    float:right;
+    color:#787878;
+}
+
+.jp-controls a, .jp-repeat, .jp-shuffle, .jp-repeat-off, .jp-shuffle-off, .jp-volume-bar {
+    float:left;
+    margin:4px;
+}
+
+.jp-volume-bar {
+    width:128px;
+    height:8px;
+    background-color:#f0f0f0;
+    margin-top:16px;
+}
+
+.jp-volume-bar-value {
+    width:128px;
+    height:8px;
+    background-color:silver;
+}
+
+/*
+.button, .jp-controls a, .jp-repeat, .jp-repeat-off, .jp-shuffle, .jp-shuffle-off {
+    -moz-border-radius:      3px;
+    -webkit-border-radius:   3px;
+    background:              white url('button.png') 0 0 repeat-x;
+    background:             -moz-linear-gradient(0% 170% 90deg, #c4c4c4, white);
+    background:             -webkit-gradient(linear, 0% 0%, 0% 170%, from(white), to(#c4c4c4));
+    border:                  1px solid;
+    border-color:            #e6e6e6 #cccccc #cccccc #e6e6e6;
+    border-radius:           3px;
+    color:                   #404040;
+    display:                 inline-block;
+    font-family:            "helvetica neue", helvetica, arial, freesans, "liberation sans", "numbus sans l", sans-serif;
+    font-size:               13px;
+    outline                  0;
+    padding:                 4px;
+    text-align:              center;
+    text-decoration:         none;
+    text-shadow:             1px 1px 0 white; 
+    white-space:             nowrap;
+}
+
+.button:hover, .jp-controls a:hover, .jp-repeat:hover, .jp-shuffle:hover, .jp-repeat-off:hover, .jp-shuffle-off:hover  {
+    background:           -moz-linear-gradient(0% 170% 90deg, #b8b8b8, white);
+    background:           -webkit-gradient(linear, 0% 0%, 0% 170%, from(white), to(#b8b8b8));
+    border-color:          #99ccff;
+    color:                 #333333;
+}
+
+.button:active, .jp-controls a:active, .jp-repeat:active, .jp-shuffle:active, .jp-repeat-off:active, .jp-shuffle-off:active  {
+    position:              relative;
+    top:                   1px;
+}
+
+.button:active, .button:focus, .jp-controls a:active, .jp-controls a:focus, .jp-repeat:focus, .jp-shuffle:focus, .jp-repeat-off:focus, .jp-shuffle-off:focus {
+    background-position:   0 -25px;
+    background:           -moz-linear-gradient(0% 170% 90deg, white, #dedede);
+    background:           -webkit-gradient(linear, 0% 0%, 0% 170%, from(#dedede), to(white));
+    border-color:          #8fc7ff #94c9ff #94c9ff #8fc7ff;
+    color:                 #1a1a1a;
+    text-shadow:           1px -1px 0 rgba(255, 255, 255, 0.5);
+}
+*/
+
+
+.jp-play, .jp-pause, .jp-stop, .jp-previous, .jp-next, .jp-toggles, .jp-repeat, .jp-repeat-off, .jp-shuffle, .jp-shuffle-off, .jp-mute, .jp-unmute, .jp-volume-max {
+    width:32px;
+    height:32px;
+    background-repeat:no-repeat;
+}
+
+.jp-play {
+    background-image:url('../images/player/play.png');
+}
+.jp-pause {
+    background-image:url('../images/player/pause.png');
+}
+.jp-stop {
+    background-image:url('../images/player/stop.png');
+}
+.jp-previous {
+    background-image:url('../images/player/previous.png');
+}
+.jp-next {
+    background-image:url('../images/player/forward.png');
+}
+.jp-previous {
+    background-image:url('../images/player/back.png');
+}
+.jp-toggles {
+}
+.jp-repeat {
+    background-image:url('../images/player/repeat.png');
+}
+.jp-repeat-off {
+    background-image:url('../images/player/repeat-off.png');
+}
+.jp-shuffle {
+    background-image:url('../images/player/shuffle.png');
+}
+.jp-shuffle-off {
+    background-image:url('../images/player/shuffle-off.png');
+}
+.jp-mute {
+    background-image:url('../images/player/mute-off.png');
+}
+.jp-unmute {
+    background-image:url('../images/player/mute.png');
+}
+.jp-volume-max {
+    background-image:url('../images/player/volume-level-3.png');
+}
+.jp-playlist-toggle {
+    width:32px;
+    height:32px;
+    background-image:url('../images/player/playlist.png');
+}
+.jp-playlist-toggle-off {
+    width:32px;
+    height:32px;
+    background-image:url('../images/player/playlist-off.png');
+    display:none;
+    visibility:hidden;
+}

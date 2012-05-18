@@ -1,0 +1,27 @@
+###
+# Main config
+###
+
+1. Edit server/config.php to your liking.
+
+2. Edit server/index.php and point the require_once("../../wStreamsConfig/config.php")
+   to the one you just configured in the previous step.
+
+3. Edit client/js/config.js to your liking.
+
+4. Edit client/index.html and point the javascript include, 
+   <script type="text/javascript" src="../../wStreamsConfig/config.js"></script>
+   to the config you created in the previous step.
+
+5. Open client/index.html in a browser.
+
+###
+# Other
+###
+
+i. You may want to configure a cron job to clean up downloaded files if they were
+   canceled abruptly. I've set my $tmpDir in config.php to /tmp, so downloaded
+   files go into /tmp/downloadAlbum. I use this cron job to periodically clean
+   them. Every morning at 05:30 they are removed.
+
+   30 5 * * * rm -Rf /tmp/downloadAlbum/*
